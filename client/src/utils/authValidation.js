@@ -1,5 +1,5 @@
 export const valid = {
-  register: ({ username, email, password }) => {
+  register: (username, email, password) => {
     let errs = []
 
     if (!username) errs = [...errs, 'Input user name']
@@ -11,14 +11,13 @@ export const valid = {
 
     return { errs, errsLength: errs.length }
   },
-  login: ({ email, password }) => {
+  login: (email, password) => {
     let errs = []
 
     if (!email) errs = [...errs, 'Input your email']
     else if (!validateEmail(email)) errs = [...errs, 'Invalid email']
 
     if (!password) errs = [...errs, 'Input your password']
-
     return { errs, errsLength: errs.length }
   },
 }
