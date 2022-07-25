@@ -2,29 +2,22 @@ export const valid = {
   register: ({ username, email, password }) => {
     let errs = []
 
-    if (!username) errs = [...errs, 'Введите имя пользователя']
-    else if (username.length > 15)
-      errs = [...errs, 'Имя пользователя больше 15 символов']
+    if (!username) errs = [...errs, 'Input user name']
 
-    if (!fullname) errs = [...errs, 'Введите полное имя']
-    else if (fullname.length > 20)
-      errs = [...errs, 'Полное имя больше 20 символов']
+    if (!email) errs = [...errs, 'Input your email']
+    else if (!validateEmail(email)) errs = [...errs, 'Invalid email']
 
-    if (!email) errs = [...errs, 'Введите электронную почту']
-    else if (!validateEmail(email)) errs = [...errs, 'Невалидная эл.почта']
-
-    if (password.length < 6) errs = [...errs, 'Пароль меньше 6 символов']
-    else if (password !== cf_password) errs = [...errs, 'Пароли не совпадают']
+    if (!password) errs = [...errs, 'Create a password']
 
     return { errs, errsLength: errs.length }
   },
   login: ({ email, password }) => {
     let errs = []
 
-    if (!email) errs = [...errs, 'Введите электронную почту']
-    else if (!validateEmail(email)) errs = [...errs, 'Невалидная эл.почта']
+    if (!email) errs = [...errs, 'Input your email']
+    else if (!validateEmail(email)) errs = [...errs, 'Invalid email']
 
-    if (password.length < 6) errs = [...errs, 'Пароль меньше 6 символов']
+    if (!password) errs = [...errs, 'Input your password']
 
     return { errs, errsLength: errs.length }
   },
