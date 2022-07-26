@@ -28,8 +28,13 @@ export const App = () => {
   }
 
   const PublicRoute = (props) => {
-    if (pathname === '/login' && isAuth) return <Navigate to={state.prevPath} />
-    return !isAuth ? props.children : <Navigate to={state.prevPath} />
+    if (pathname === '/login' && isAuth)
+      return <Navigate to={state?.prevPath ? state.prevPath : '/'} />
+    return !isAuth ? (
+      props.children
+    ) : (
+      <Navigate to={state?.prevPath ? state.prevPath : '/'} />
+    )
   }
 
   return (
