@@ -12,23 +12,27 @@ import { PlaceOrder } from './Pages/PlaceOrder'
 import { Cart } from './Pages/Cart'
 import { Profile } from './Pages/Profile'
 import { Register } from './Pages/Register'
+import { Notify } from './components/Notify'
 
 export const App = () => {
   return (
-    <div>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/products/:id' element={<SingleProduct />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/cart/:id?' element={<Cart />} />
-        <Route path='/shipping' element={<Shipping />} />
-        <Route path='/payment' element={<Payment />} />
-        <Route path='/placeorder' element={<PlaceOrder />} />
-        <Route path='/order' element={<Order />} />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+    <div className='app'>
+      <Notify />
+      <div className='container'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/products/:id' element={<SingleProduct />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/cart/:id?' element={<Cart />} />
+          <Route path='/shipping' element={<Shipping />} />
+          <Route path='/payment' element={<Payment />} />
+          <Route path='/placeorder' element={<PlaceOrder />} />
+          <Route path='/order' element={<Order />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </div>
     </div>
   )
 }
