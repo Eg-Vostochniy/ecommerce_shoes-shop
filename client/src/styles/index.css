@@ -18,11 +18,21 @@ body {
 .container {
   width: 1200px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 img {
   display: block;
   width: 100%;
   object-fit: cover;
+}
+.custom__input {
+  padding: 10px;
+  height: 25px;
+  border: none;
+  border-radius: 6px;
 }
 
 @import url('./auth.css');

@@ -1,0 +1,61 @@
+.auth__form {
+  width: 400px;
+  min-height: 400px;
+  height: max-content;
+  padding: 35px 25px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.267);
+  border-radius: 10px;
+  position: relative;
+}
+.auth__form h2 {
+  text-align: center;
+  color: #fff;
+}
+.auth__form.login {
+  background: rgb(69, 143, 54);
+}
+.auth__form.register {
+  background: rgb(143, 112, 54);
+}
+.auth__label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.auth__label small {
+  position: absolute;
+  right: 5px;
+  bottom: -13px;
+  opacity: 50%;
+  cursor: pointer;
+}
+.auth__form-button {
+  background: rgb(105, 112, 223);
+  border-radius: 8px;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.auth__errors {
+  width: 250px;
+  padding: 10px 20px 10px 20px;
+  height: max-content;
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translate(-50%);
+  background: rgba(185, 95, 95, 0.582);
+  color: rgb(54, 54, 54);
+  border-radius: 10px;
+}
+.auth__form-redirect {
+  text-align: center;
+}
+.auth__form-redirect a {
+  color: rgb(90, 34, 34);
+}
