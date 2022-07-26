@@ -19,7 +19,6 @@ body {
 .container {
   width: 1200px;
   margin: 0 auto;
-  position: relative;
 }
 img {
   display: block;
@@ -69,3 +68,4 @@ img {
 }
 
 @import url('./auth.css');
+@import url('./header.css');
