@@ -9,7 +9,7 @@ export const CustomInput = ({ type, name, cls, ...props }) => {
     <input
       onChange={handleChange}
       value={value}
-      className={cls}
+      className={`custom__input ${cls}`}
       type={type}
       name={name}
       {...props}
