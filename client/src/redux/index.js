@@ -24,7 +24,7 @@ const authInfoFromLS = localStorage.getItem('auth')
 
 const initialState = {
   cartItems: cartItemsFromLS,
-  authUser: authInfoFromLS,
+  auth: authInfoFromLS,
 }
 
 export const store = createStore(
