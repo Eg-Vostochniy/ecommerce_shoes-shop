@@ -28,37 +28,35 @@ export const Login = () => {
   }
 
   return (
-    <div className='auth login'>
-      <div className='container'>
-        <form onSubmit={formSubmit} ref={form} className='auth__form'>
-          <h2>Sign In</h2>
-          <label className='auth__label email'>
-            <span>Email</span>
-            <CustomInput type='email' name='email' />
-          </label>
-          <label className='auth__label password'>
-            <span>Password</span>
-            <CustomInput
-              type={isShowedPassword ? 'text' : 'password'}
-              name='password'
-            />
-            <small onClick={() => setIsShowedPassword(!isShowedPassword)}>
-              {isShowedPassword ? 'Hide' : 'Show'}
-            </small>
-          </label>
-          <button type='submit'>Login</button>
-          <span className='auth__form-redirect'>
-            <Link to='/register'>Create account</Link>
-          </span>
-          {validErrs.length > 0 && (
-            <div>
-              {validErrs.map((error) => (
-                <div>* {error}</div>
-              ))}
-            </div>
-          )}
-        </form>
-      </div>
-    </div>
+    <form onSubmit={formSubmit} ref={form} className='auth__form login'>
+      <h2>Sign In</h2>
+      <label className='auth__label email'>
+        <span>Email</span>
+        <CustomInput type='email' name='email' />
+      </label>
+      <label className='auth__label password'>
+        <span>Password</span>
+        <CustomInput
+          type={isShowedPassword ? 'text' : 'password'}
+          name='password'
+        />
+        <small onClick={() => setIsShowedPassword(!isShowedPassword)}>
+          {isShowedPassword ? 'Hide' : 'Show'}
+        </small>
+      </label>
+      <button className='auth__form-button' type='submit'>
+        Login
+      </button>
+      <span className='auth__form-redirect'>
+        <Link to='/register'>Create account</Link>
+      </span>
+      {validErrs.length > 0 && (
+        <div className='auth__errors'>
+          {validErrs.map((error) => (
+            <div>* {error}</div>
+          ))}
+        </div>
+      )}
+    </form>
   )
 }
