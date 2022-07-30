@@ -5,17 +5,20 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import { alert } from './reducers/Alert'
 import { product } from './reducers/Product'
 import { auth } from './reducers/Auth'
+import { cart } from './reducers/Cart'
+import { strParser } from '../utils/strParser'
 
 const reducers = combineReducers({
   alert,
   product,
   auth,
+  cart,
 })
 
 const middleware = [thunk]
 
 const cartItemsFromLS = localStorage.getItem('cartItems')
-  ? JSON.parse(localStorage.getItem('cartItems'))
+  ? strParser(localStorage.getItem('cartItems')).obj
   : []
 
 const authInfoFromLS = localStorage.getItem('auth')
@@ -23,7 +26,7 @@ const authInfoFromLS = localStorage.getItem('auth')
   : null
 
 const initialState = {
-  cartItems: cartItemsFromLS,
+  cart: { cartItems: cartItemsFromLS },
   auth: authInfoFromLS,
 }
 
