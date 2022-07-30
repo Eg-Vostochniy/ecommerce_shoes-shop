@@ -42,26 +42,14 @@ export const App = () => {
   return (
     <div className='app'>
       <Notify />
-      <Header />
+      {pathname !== '/login' && pathname !== '/register' && <Header />}
       <div className='container'>
-        <SubHeader isAuth={isAuth} />
+        {pathname !== '/login' && pathname !== '/register' && (
+          <SubHeader isAuth={isAuth} />
+        )}
         <Routes>
-          <Route
-            path='/'
-            element={
-              <PrivateRoute>
-                <Home />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path='/products/:id'
-            element={
-              <PrivateRoute>
-                <SingleProduct />
-              </PrivateRoute>
-            }
-          />
+          <Route path='/' element={<Home />} />
+          <Route path='/products/:id' element={<SingleProduct />} />
           <Route
             path='/login'
             element={
