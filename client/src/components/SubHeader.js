@@ -1,11 +1,14 @@
 import logo from '../assets/img/sneaker-shop-logo-vector-38650178.jpg'
 import shoppingCart from '../assets/img/shopping-cart.png'
 import { CustomInput } from './CustomInput'
+import { Link } from 'react-router-dom'
 
 export const SubHeader = ({ isAuth }) => {
   return (
     <header className='subheader'>
-      <img className='logo' src={logo} alt='' />
+      <Link to=''>
+        <img className='logo' src={logo} alt='' />
+      </Link>
       <div className='subheader__search'>
         <CustomInput
           type='search'
