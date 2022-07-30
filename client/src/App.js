@@ -14,6 +14,8 @@ import { Profile } from './Pages/Profile'
 import { Register } from './Pages/Register'
 import { Notify } from './components/Notify'
 import { useSelector } from 'react-redux'
+import { Header } from './components/Header'
+import { SubHeader } from './components/SubHeader'
 
 export const App = () => {
   const isAuth = useSelector((state) => state.auth)
@@ -40,24 +42,14 @@ export const App = () => {
   return (
     <div className='app'>
       <Notify />
+      {pathname !== '/login' && pathname !== '/register' && <Header />}
       <div className='container'>
+        {pathname !== '/login' && pathname !== '/register' && (
+          <SubHeader isAuth={isAuth} />
+        )}
         <Routes>
-          <Route
-            path='/'
-            element={
-              <PrivateRoute>
-                <Home />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path='/products/:id'
-            element={
-              <PrivateRoute>
-                <SingleProduct />
-              </PrivateRoute>
-            }
-          />
+          <Route path='/' element={<Home />} />
+          <Route path='/products/:id' element={<SingleProduct />} />
           <Route
             path='/login'
             element={

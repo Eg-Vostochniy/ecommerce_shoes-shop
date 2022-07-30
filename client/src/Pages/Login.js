@@ -4,6 +4,7 @@ import { CustomInput } from '../components/CustomInput'
 import { useDispatch } from 'react-redux'
 import { login } from '../redux/actions/Auth'
 import { valid } from '../utils/authValidation'
+import logo from '../assets/img/sneaker-shop-logo-vector-38650178.jpg'
 
 export const Login = () => {
   const [isShowedPassword, setIsShowedPassword] = useState(false)
@@ -29,6 +30,9 @@ export const Login = () => {
 
   return (
     <div className='auth'>
+      <Link to='/'>
+        <img src={logo} alt='logo' />
+      </Link>
       <form onSubmit={formSubmit} ref={form} className='auth__form login'>
         <h2>Sign In</h2>
         <label className='auth__label email'>
