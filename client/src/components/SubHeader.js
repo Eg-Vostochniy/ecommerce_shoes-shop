@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 export const SubHeader = ({ isAuth }) => {
   return (
     <header className='subheader'>
-      <Link to=''>
+      <Link to='/'>
         <img className='logo' src={logo} alt='' />
       </Link>
       <div className='subheader__search'>
