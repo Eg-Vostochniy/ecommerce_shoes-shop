@@ -1,12 +1,14 @@
 import { databaseConnection } from './config/databse.js'
 import importData from './DataImport.js'
-import productRoutes from './routes/Product.js'
-import authRoutes from './routes/Auth.js'
 import { errorHandler, notFound } from './middleware/Error.js'
 
 import express from 'express'
 import dotenv from 'dotenv'
+
+import productRoutes from './routes/Product.js'
+import authRoutes from './routes/Auth.js'
 import userRoutes from './routes/User.js'
+import orderRoutes from './routes/Order.js'
 
 dotenv.config()
 
@@ -18,6 +20,7 @@ app.use('/api/import', importData)
 app.use('/api', productRoutes)
 app.use('/api', authRoutes)
 app.use('/api', userRoutes)
+app.use('/api', orderRoutes)
 
 app.use(notFound)
 app.use(errorHandler)

@@ -1,5 +1,4 @@
 import './styles/index.css'
-import 'react-toastify/dist/ReactToastify.css'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { Home } from './Pages/Home'
 import { SingleProduct } from './Pages/SingleProduct'
@@ -18,7 +17,8 @@ import { Header } from './components/Header'
 import { SubHeader } from './components/SubHeader'
 
 export const App = () => {
-  const isAuth = useSelector((state) => state.auth)
+  const isAuth = useSelector((state) => state.auth?.user)
+
   const { pathname, state } = useLocation()
 
   const PrivateRoute = (props) => {
@@ -42,11 +42,10 @@ export const App = () => {
   return (
     <div className='app'>
       <Notify />
-      {pathname !== '/login' && pathname !== '/register' && <Header />}
+      <Header />
       <div className='container'>
-        {pathname !== '/login' && pathname !== '/register' && (
-          <SubHeader isAuth={isAuth} />
-        )}
+        <SubHeader isAuth={isAuth} />
+
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/products/:id' element={<SingleProduct />} />
@@ -74,14 +73,7 @@ export const App = () => {
               </PrivateRoute>
             }
           />
-          <Route
-            path='/cart/:id?'
-            element={
-              <PrivateRoute>
-                <Cart />
-              </PrivateRoute>
-            }
-          />
+          <Route path='/cart' element={<Cart />} />
           <Route
             path='/shipping'
             element={

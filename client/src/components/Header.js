@@ -12,18 +12,26 @@ export const Header = () => {
         </div>
         <div className='header__socials'>
           <span>
-            <a href='https://instagram.com/vlad_zbukar' target='_blank'>
-              <img src={instIcon} />
+            <a
+              href='https://instagram.com/vlad_zbukar'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <img src={instIcon} alt='inst' />
             </a>
           </span>
           <span>
-            <a href='https://t.me/vladzbukar' target='_blank'>
-              <img src={telIcon} />
+            <a href='https://t.me/vladzbukar' target='_blank' rel='noreferrer'>
+              <img src={telIcon} alt='phone' />
             </a>
           </span>
           <span>
-            <a href='https://github.com/Eg-Vostochniy' target='_blank'>
-              <img src={githIcon} />
+            <a
+              href='https://github.com/Eg-Vostochniy'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <img src={githIcon} alt='gitHub' />
             </a>
           </span>
         </div>

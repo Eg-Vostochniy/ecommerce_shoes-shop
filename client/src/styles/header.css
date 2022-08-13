@@ -61,13 +61,21 @@
   padding: 20px 10px;
   width: 300px;
 }
-.subheader__search-btn {
+.subheader__search_btn {
   height: 42px;
   width: 75px;
   background: black;
   color: white;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .subheader__auth {
+  display: flex;
+  gap: 15px;
   cursor: pointer;
+}
+.subheader__auth a {
+  color: black;
 }

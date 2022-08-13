@@ -7,40 +7,37 @@ import { listProduct } from '../../redux/actions/Product'
 
 export const ShopSection = () => {
   const dispatch = useDispatch()
-  const productList = useSelector((state) => state.product)
+  const productList = useSelector((state) => state.product.products)
 
   useEffect(() => {
     dispatch(listProduct())
   }, [])
   return (
-    <div className='container'>
-      <div className='section'>
-        <div className='row'>
-          <div className='col-lg-12 col-md-12 article'>
-            <div className='shop-container row'>
-              {
-                <div className='shop col-lg-4 col-md-12 col-sm-6'>
-                  <div className='border__product'>
-                    <Link to='#'>
-                      <div className='shop-back'>
-                        <img src='' alt='' />
-                      </div>
-                    </Link>
-                    <div className='shop__text'>
-                      <p>
-                        <Link to='#'>name</Link>
-                      </p>
-                      <Rating value='12' text='text' />
-                      <h3>$</h3>
-                    </div>
-                  </div>
-                </div>
-              }
-              <Pagination />
+    <div className='products'>
+      {productList.map((p) => (
+        <div key={p._id} className='products__item'>
+          <div className='products__item-top'>
+            <Link className='products__item_img' to={`/products/${p._id}`}>
+              <img src={p.image} alt={p.name} />
+            </Link>
+            <div className='products__item_name'>{p.name}</div>
+          </div>
+          <div className='products__item-bottom'>
+            <div className='products__item_rating'>
+              {[...Array(p.rating)].map((_, index) => (
+                <Rating key={index} isStared={true} />
+              ))}
+              {[...Array(5 - p.rating)].map((_, index) => (
+                <Rating key={index} isStared={false} />
+              ))}
+              <div className='products__item_reviews'>
+                {p.numReviews} reviews
+              </div>
             </div>
+            <div className='products__item_price'>{p.price}$</div>
           </div>
         </div>
-      </div>
+      ))}
     </div>
   )
 }

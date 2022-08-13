@@ -1,31 +1,56 @@
+import { useState } from 'react'
+import { useSelector } from 'react-redux'
+
 export const ProfileTabs = () => {
+  const { name, email } = useSelector((state) => state.auth.user)
+
+  const [formValues, setFormValues] = useState({
+    username: name,
+    email: email,
+  })
+
+  const handleChangeFormValues = (e) => {
+    const { value, name } = e.target
+    setFormValues({ ...formValues, [name]: value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(e)
+  }
+
+  const isProfileTabsChanged = () => {
+    if (name === formValues.username && email === formValues.email) return true
+    else return false
+  }
+
   return (
-    <form className=''>
-      <div className=''>
-        <div className=''>
-          <label for='account-fn'>User name</label>
-          <input className='form-control' type='text' required />
+    <form className='profile__tabs' onSubmit={handleSubmit}>
+      <div className='profile__tabs-inputs'>
+        <div className='profile__tabs-input profile__tabs_username-label'>
+          <label htmlFor='profile__tabs_username-label'>User name</label>
+          <input
+            value={formValues.username}
+            onChange={handleChangeFormValues}
+            type='text'
+            name='username'
+            required
+          />
+        </div>
+        <div className='profile__tabs-input profile__tabs_email-label'>
+          <label htmlFor='profile__tabs_email-label'>Email</label>
+          <input
+            value={formValues.email}
+            onChange={handleChangeFormValues}
+            name='email'
+            type='email'
+            required
+          />
         </div>
       </div>
-      <div className='col-md-6'>
-        <div className='form'>
-          <label for='account-email'>Email</label>
-          <input className='form-control' type='email' />
-        </div>
-      </div>
-      <div className='col-md-6'>
-        <div className='form'>
-          <label for='account-pass'>Password</label>
-          <input className='form-control' type='password' />
-        </div>
-      </div>
-      <div className='col-md-6'>
-        <div className='form'>
-          <label for='account-confirm-pass'>Confirm password</label>
-          <input className='form-control' type='password' />
-        </div>
-      </div>
-      <button type='submit'>Update profile</button>
+      <button type='submit' disabled={isProfileTabsChanged()}>
+        Update profile
+      </button>
     </form>
   )
 }

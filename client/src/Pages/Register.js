@@ -4,7 +4,6 @@ import { CustomInput } from '../components/CustomInput'
 import { useDispatch } from 'react-redux'
 import { register } from '../redux/actions/Auth'
 import { valid } from '../utils/authValidation'
-import logo from '../assets/img/sneaker-shop-logo-vector-38650178.jpg'
 
 export const Register = () => {
   const [isShowedPassword, setIsShowedPassword] = useState(false)
@@ -37,9 +36,6 @@ export const Register = () => {
 
   return (
     <div className='auth'>
-      <Link to='/'>
-        <img src={logo} alt='logo' />
-      </Link>
       <form onSubmit={formSubmit} ref={form} className='auth__form register'>
         <h2>Sign Up</h2>
         <label className='auth__label username'>

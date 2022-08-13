@@ -6,7 +6,6 @@ import { alert } from './reducers/Alert'
 import { product } from './reducers/Product'
 import { auth } from './reducers/Auth'
 import { cart } from './reducers/Cart'
-import { strParser } from '../utils/strParser'
 
 const reducers = combineReducers({
   alert,
@@ -18,7 +17,7 @@ const reducers = combineReducers({
 const middleware = [thunk]
 
 const cartItemsFromLS = localStorage.getItem('cartItems')
-  ? strParser(localStorage.getItem('cartItems')).obj
+  ? JSON.parse(localStorage.getItem('cartItems'))
   : []
 
 const authInfoFromLS = localStorage.getItem('auth')
@@ -26,7 +25,10 @@ const authInfoFromLS = localStorage.getItem('auth')
   : null
 
 const initialState = {
-  cart: { cartItems: cartItemsFromLS },
+  cart: {
+    cartItems: cartItemsFromLS,
+    cartLength: cartItemsFromLS.length,
+  },
   auth: authInfoFromLS,
 }
 

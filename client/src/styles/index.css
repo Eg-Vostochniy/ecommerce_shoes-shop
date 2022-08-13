@@ -31,6 +31,12 @@ img {
   border: none;
   border-radius: 6px;
 }
+
+.rating {
+  width: 17px;
+  height: 17px;
+}
+
 .svg-loader {
   position: absolute;
   top: 50%;
@@ -69,3 +75,7 @@ img {
 
 @import url('./auth.css');
 @import url('./header.css');
+@import url('./products.css');
+@import url('./cart.css');
+@import url('./notify.css');
+@import url('./profile.css');
