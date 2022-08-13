@@ -1,0 +1,28 @@
+.notify {
+  position: absolute;
+  top: 75px;
+  left: 20px;
+  transition: all 1s ease-in-out;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+}
+.notify.error {
+  background: rgb(221, 69, 69);
+}
+.notify.success {
+  background: rgb(19, 187, 19);
+}
+.notify div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 16px;
+}
+.notify div:nth-child(1) span {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.notify div:nth-child(1) span:hover {
+  color: rgb(63, 3, 3);
+}

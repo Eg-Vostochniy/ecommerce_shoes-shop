@@ -45,7 +45,20 @@ export const register = (username, email, password) => async (dispatch) => {
 
     dispatch({ type: ALERT, payload: { loading: false } })
 
-    localStorage.setItem('auth', JSON.stringify(data))
+    localStorage.setItem('auth', JSON.stringify(data.user))
+  } catch (error) {
+    dispatch({
+      type: ALERT,
+      payload: { error: error.response.data.msg || error.message },
+    })
+  }
+}
+
+export const logout = () => (dispatch) => {
+  try {
+    dispatch({ type: AUTH, payload: null })
+
+    localStorage.removeItem('auth')
   } catch (error) {
     dispatch({
       type: ALERT,

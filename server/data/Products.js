@@ -1,62 +1,68 @@
 export const products = [
   {
-    name: 'Velcro Ballerians For Girls (Pink)',
-    image: '',
+    name: 'Adidas Niteball Core Black Cloud White Sub Green',
+    image:
+      'https://images.prom.ua/3622145436_w736_h430_krossovki-adidas-niteball.jpg',
     description:
-      'dfsjgdfjsgdfksgyuhayguh ayudfashguyfdh sgyudfsgy gdfsgdf dfsgdf',
-    price: 89,
-    countInStock: 3,
+      'Кроссовки, объединившие характеристики баскетбольных флагманов и актуальный дизайн на грани спорта и повседневности. Это новый лайфстайл-силуэт, впервые представленный в 2020 году. Кроссовки Niteball сделаны с поразительной детализацией, в них продумана каждая деталь. Верхняя часть обладает многослойной конструкцией из кожи и других безупречно подобранных материалов. Сбоку расположены три полоски, которые также выступают в качестве каркаса для шнуровки. Крупные рефлективные вставки будет хорошо видно в ночное время, а мощная подошва с амортизацией Lightstrike гарантирует высокий уровень отдачи энергии. По замыслу дизайнеров это повседневная модель, которая благодаря спортивным характеристикам будет так же эффективна и во время игры.',
+    price: 199,
+    countInStock: 6,
     rating: 4,
-    numreviews: 4,
+    numReviews: 4,
   },
   {
-    name: 'Velcro Ballerians For Girls (Pink)',
-    image: '',
+    name: 'Adidas Niteball Cream White Collegiate Navy',
+    image:
+      'https://images.prom.ua/3623611289_w736_h430_krossovki-adidas-niteball.jpg',
     description:
-      'dfsjgdfjsgdfksgyuhayguh ayudfashguyfdh sgyudfsgy gdfsgdf dfsgdf',
-    price: 89,
-    countInStock: 3,
+      'Кроссовки, объединившие характеристики баскетбольных флагманов и актуальный дизайн на грани спорта и повседневности. Это новый лайфстайл-силуэт, впервые представленный в 2020 году. Кроссовки Niteball сделаны с поразительной детализацией, в них продумана каждая деталь. Верхняя часть обладает многослойной конструкцией из кожи и других безупречно подобранных материалов. Сбоку расположены три полоски, которые также выступают в качестве каркаса для шнуровки. Крупные рефлективные вставки будет хорошо видно в ночное время, а мощная подошва с амортизацией Lightstrike гарантирует высокий уровень отдачи энергии. По замыслу дизайнеров это повседневная модель, которая благодаря спортивным характеристикам будет так же эффективна и во время игры.',
+    price: 250,
+    countInStock: 4,
     rating: 4,
-    numreviews: 4,
+    numReviews: 2,
   },
   {
-    name: 'Velcro Ballerians For Girls (Pink)',
-    image: '',
+    name: 'Adidas Yeezy Boost 350 V2 Cream/Triple White - CP9366',
+    image:
+      'https://images.prom.ua/3727072611_w736_h430_krossovki-adidas-yeezy.jpg',
     description:
-      'dfsjgdfjsgdfksgyuhayguh ayudfashguyfdh sgyudfsgy gdfsgdf dfsgdf',
-    price: 89,
+      'Белые кроссовки по-настоящему универсальны — их можно сочетать с вещами практически любых оттенков и стилей. Особенно когда речь идёт о таком популярном силуэте, как YEEZY BOOST 350 V2. Канье Уэст и Adidas сделали единый оттенок по всей поверхности кроссовок, отказавшись от каких-либо надписей и брендинга. Лидирующую по уровню комфорта амортизацию  BOOST по бокам скрывает слой ребристой белой резины, снизу — полупрозрачная подмётка. Верх сделан из Primeknit с меняющимися узорами. «TRIPLE WHITE» — наиболее лаконичная расцветка 350 V2, которая идеально подойдёт к долгим прогулкам. Главное — дождаться правильной погоды.',
+    price: 350,
     countInStock: 3,
-    rating: 4,
-    numreviews: 4,
+    rating: 5,
+    numReviews: 10,
   },
   {
-    name: 'Velcro Ballerians For Girls (Pink)',
-    image: '',
+    name: 'Adidas Yeezy Boost 350 V2 Black - FU9006',
+    image:
+      'https://images.prom.ua/3725331452_w736_h430_krossovki-adidas-yeezy.jpg',
     description:
-      'dfsjgdfjsgdfksgyuhayguh ayudfashguyfdh sgyudfsgy gdfsgdf dfsgdf',
-    price: 89,
-    countInStock: 3,
-    rating: 4,
-    numreviews: 4,
+      'Вслед за Yeeze Boost 700 V2 Vanta, семейство полностью чёрных кроссовок от Канье Уэста и Adidas пополняет новая расцветка YEEZY BOOST 350 V2 с лаконичным названием «Black». Продолжая заданную в расцветке “Static” эстетику с полупрозрачной боковой полосой вместо надписи “SPLY-350”, “Black” стала наиболее однотонной вариацией YEEZY BOOST 350 V2. В чёрный цвет окрашен текстильный материал Primeknit и подошва целиком, включая подмётку, чей коричневый оттенок последние несколько релизов силуэта оставался неизменным.',
+    price: 310,
+    countInStock: 6,
+    rating: 5,
+    numReviews: 6,
   },
   {
-    name: 'Velcro Ballerians For Girls (Pink)',
-    image: '',
+    name: 'Adidas Yeezy Boost 700 V2 Vanta - FU6684',
+    image:
+      'https://images.prom.ua/3727139068_w736_h430_krossovki-adidas-yeezy.jpg',
     description:
-      'dfsjgdfjsgdfksgyuhayguh ayudfashguyfdh sgyudfsgy gdfsgdf dfsgdf',
-    price: 89,
-    countInStock: 3,
+      'Первая половина 2019 года выдалась насыщенной в плане релизов YEEZY, при этом Канье Уэст и adidas Originals каждый раз находят способ удивить поклонников. На этот раз новая расцветка «Vanta» для YEEZY BOOST 700 V2 сопровождается моделями для детей и малышей — впервые за всю историю семисотых YEEZY. Материал Vantablack известен как одна из самых чёрных субстанций на земле, поглощая до 99,96% падающего на него света. Скорее всего, именно к нему отсылает название расцветки «Vanta». Новые YEEZY BOOST 700 V2 сделаны из плотного чёрного канваса с накладками из чёрной замши и светоотражающими деталями на заднике, возле шнуровки и на боковых элементах подошвы.',
+    price: 200,
+    countInStock: 0,
     rating: 4,
-    numreviews: 4,
+    numReviews: 3,
   },
   {
-    name: 'Velcro Ballerians For Girls (Pink)',
-    image: '',
+    name: 'Adidas Yeezy Boost 700 V3 Alvah',
+    image:
+      'https://images.prom.ua/3171056344_w736_h430_krossovki-adidas-yeezy.jpg',
     description:
-      'dfsjgdfjsgdfksgyuhayguh ayudfashguyfdh sgyudfsgy gdfsgdf dfsgdf',
-    price: 89,
-    countInStock: 3,
-    rating: 4,
-    numreviews: 4,
+      'Совместная работа adidas Originals + Kanye West на базе футуристичной модели. Верх модели выполнен из сетчатого моноволокна, а рефлективные накладки из RPU выполняют не только декоративную функцию, но и обеспечивают поддержку стопы вкупе с подчёркиванием оригинального дизайна. Авторский стиль коллаборации adidas Originals и Канье Уэст предполагает расслабленность, поэтому в этом силуэте шнурки получают максимальную эластичность без завязок. В комплекте также есть классический набор шнурков. Первое появление Yeezy Boost 700 вновь пришлось на показ очередного сезона бренда Yeezy. Это была пятая коллекция, которую презентовали в 2017 году на осенне-зимней Неделе моды в Нью-Йорке. К тому моменту мир охватила тенденция на массивные кроссовки и силуэт под номером 700 вышел аккурат в разгар «хайпа».',
+    price: 560,
+    countInStock: 2,
+    rating: 5,
+    numReviews: 6,
   },
 ]
